@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Log-in</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="../css/style.css">
+        <script src="../../../lg-cd/script.js"></script>
+    </head>
+    <body>
+        <main class="container">
+                <h2>Login</h2>
+                        <form class="form_login" method="POST" action="/log">
+                                <input type="email" class="form-control" autocomplete="off" placeholder="E-mail" name="email">                   
+                                <input type="password" class="form-control" autocomplete="off" placeholder= "Senha" name="senha" required maxlength="50" minlength="8">
+                                <input type="submit" onclick="logar(); return false"></button>
+                            <% if (message.length > 0) { %>
+                                <div class="text-center">
+                                    <label style="font-weight:bold; color: rgb(219, 112, 112);"><%= message %></label>
+                                </div>
+                            <%}%>
+                        </form>
+                        <div class="footer">
+                            <span>Não possui conta? Neste caso</span>
+                            <div class="social-fields">
+                                </div>
+                                <div class="social-field facebook">
+                                    <a href="cadastro">
+                                        Clique aqui para se cadastrar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+        </main>
+    </body>
+</html>
