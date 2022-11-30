@@ -84,7 +84,7 @@ app.post('/register', function (req, res){
             var message = 'Esse e-mail já está em uso.';
             res.render('views/cadastro', { message: message });
         }else{
-            var query = 'INSERT INTO corrupcao.usuarios (nome, email, senha) VALUES(?, ?, ?)';
+            var query = 'INSERT INTO railway.usuarios (nome, email, senha) VALUES(?, ?, ?)';
 
             con.query(query, [nome, email, senha], function (err, results){
                 if (err){
