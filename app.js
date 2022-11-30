@@ -3,7 +3,39 @@ const session = require("express-session");
 const path = require('path');
 const app = express();
 // Captura os valores
+const bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+
+const mysql = require("mysql"); 
+const { resolveSoa } = require('dns');
+
+app.use(session({secret: "lftbmrnbw"}));
+app.use(express.static('public'));
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '/public'));
+
 // Conectando database
+function conectiondb(){
+    var con = mysql.createConnection({
+        host: 'containers-us-west-88.railway.app', 
+        user: 'root', 
+        port: 5439,
+        password: 'rXw0fZ0g4nicY3Ie9PQw', 
+        database: 'railway'
+    });
+
+    con.connect((err) => {
+        if (err) {
+            console.log('Erro durante conexão do banco de dados', err)
+            return
+        }
+        console.log('Conexão bem sucedida!')
+    });
+
+    return con;
+}
+
 // Definição de rotas 
 
 app.get('/', (req, res) => {
