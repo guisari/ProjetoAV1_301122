@@ -15,6 +15,16 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/public'));
 
+// Conectando database
+function conectiondb(){
+    var con = mysql.createConnection({
+        user: 'root',
+        password: 'rXw0fZ0g4nicY3Ie9PQw',
+        host: 'containers-us-west-88.railway.app',
+        port: 5439,
+        database:'railway'
+    });
+
     con.connect((err) => {
         if (err) {
             console.log('Erro durante conexão do banco de dados', err)
@@ -75,7 +85,7 @@ app.post('/register', function (req, res){
             var message = 'Esse e-mail já está em uso.';
             res.render('views/cadastro', { message: message });
         }else{
-            var query = 'INSERT INTO corrupcao.usuarios (nome, email, senha) VALUES(?, ?, ?)';
+            var query = 'INSERT INTO railway.usuarios (nome, email, senha) VALUES(?, ?, ?)';
 
             con.query(query, [nome, email, senha], function (err, results){
                 if (err){
