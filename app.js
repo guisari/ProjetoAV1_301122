@@ -117,4 +117,4 @@ app.post('/log', function (req, res){
     });
 });
 
-app.listen(process.env.PORT || 3000);
+app.listen(5439, () => console.log('Server em status = 1'));
