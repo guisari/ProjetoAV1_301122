@@ -10,10 +10,14 @@ app.use(bodyParser.json());
 const mysql = require("mysql"); 
 const { resolveSoa } = require('dns');
 
-app.use(session({secret: "lftbmrnbw"}));
+app.use(session({
+    secret: "lftbmrnbw",
+    resave: true,
+    saveUninitialized: true}));
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/public'));
+
 
 // Conectando database
 function conectiondb(){
