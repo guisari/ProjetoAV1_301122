@@ -10,22 +10,18 @@ app.use(bodyParser.json());
 const mysql = require("mysql"); 
 const { resolveSoa } = require('dns');
 
-app.use(session({
-    secret: "lftbmrnbw",
-    resave: true,
-    saveUninitialized: true}));
+app.use(session({secret: "lftbmrnbw"}));
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/public'));
 
-
 // Conectando database
 function conectiondb(){
     var con = mysql.createConnection({
-        host: 'containers-us-west-88.railway.app', 
-        user: 'root', 
-        password: 'rXw0fZ0g4nicY3Ie9PQw', 
-        database: 'railway'
+        host: 'localhost', 
+        user: 'guilherme', 
+        password: 'Ale@3149', 
+        database: 'corrupcao'
     });
 
     con.connect((err) => {
@@ -88,7 +84,7 @@ app.post('/register', function (req, res){
             var message = 'Esse e-mail já está em uso.';
             res.render('views/cadastro', { message: message });
         }else{
-            var query = 'INSERT INTO railway.usuarios (nome, email, senha) VALUES(?, ?, ?)';
+            var query = 'INSERT INTO corrupcao.usuarios (nome, email, senha) VALUES(?, ?, ?)';
 
             con.query(query, [nome, email, senha], function (err, results){
                 if (err){
@@ -121,4 +117,4 @@ app.post('/log', function (req, res){
     });
 });
 
-app.listen(5439);
+app.listen(process.env.PORT || 3000)
