@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta chaerset="utf-8">
+        <title>Dashboard Profile</title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+    
+        <div class="top-bar"></div>
+        <div class="site-bg"></div>
+        <nav>
+            <button type="button"> <img src="profile.png" height ="30" width="30" /></button>
+            <button type="button"> <img src="trophy.png" height ="30" width="30" /></button>
+            <button type="button"> <img src="chart.png" height ="30" width="30" /></button>
+            <button type="button"> <img src="chat.png" height ="30" width="30" /></button>
+            <button type="button"> <img src="posts.png" height ="30" width="30" /></button>
+            <button type="button"> <img src="Settings.png" height ="30" width="30" /></button>
+            <button type="button"> <img src="home.png" height ="30" width="30" /></button>
+        </nav>
+
+        <div class="rectangle-50"></div>
+        <div class="rectangle-56"><img src="foto.png"></div>
+              <div class="rectangle-39"></div>
+              <div class="rectangle-54"></div>
+              <div class="rectangle-57"></div>
+              <div class="perfil-nome valign-text-middle">Nome Usuário</div>
+              <div class="edit-prof valign-text-middle">Editar Perfil</div>
+              <div class="dados-do-usuário valign-text-middle">Membro desde: 2018 <br>
+                Score: 252 <br> Criações: 34 <br> ID: 19849651dw51</div>
+              <div class="rectangle-55"><img src="level.png"/></div>
+              <div class="nome-da-empresa valign-text-middle">©2022 NOME DA EMPRESA - TODOS OS DIREITOS
+                RESERVADOS</div>
+              <div class="recente valign-text-middle roboto-medium-black-36px">Recente</div>
+              <div class="destaques valign-text-middle roboto-medium-back-36px">Destaques</div>
+              <h1 class="nvel-2 valign-text-middle roboto-medium-black-36px">Nível 2</h1>
+              <div class="lema-1 valign-text-middle">Lema</div>
+              <div class="vida-de-programador valign-text-middle roboto-normal-back-18px">A vida de programador não é fácil: escrever código o dia todo, corrigir erros toda a noite e rever centenas e centenas de linhas de código na esperança de encontrar o ponto e vírgula que está a estragar tudo! </div>
+            
+
+
+    </body>
+</html>    
