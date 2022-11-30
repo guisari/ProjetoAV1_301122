@@ -21,7 +21,6 @@ function conectiondb(){
         user: 'root',
         password: 'rXw0fZ0g4nicY3Ie9PQw',
         host: 'containers-us-west-88.railway.app',
-        port: 5439,
         database:'railway'
     });
 
