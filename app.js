@@ -15,15 +15,6 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/public'));
 
-// Conectando database
-function conectiondb(){
-    var con = mysql.createConnection({
-        host: 'localhost', 
-        user: 'guilherme', 
-        password: 'Ale@3149', 
-        database: 'corrupcao'
-    });
-
     con.connect((err) => {
         if (err) {
             console.log('Erro durante conexão do banco de dados', err)
