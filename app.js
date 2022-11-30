@@ -20,7 +20,6 @@ function conectiondb(){
     var con = mysql.createConnection({
         host: 'containers-us-west-88.railway.app', 
         user: 'root', 
-        port: 5439,
         password: 'rXw0fZ0g4nicY3Ie9PQw', 
         database: 'railway'
     });
